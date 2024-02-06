@@ -16,7 +16,7 @@ object PhoneNumberRepositoryImpl : PhoneNumberRepository {
     private val phoneNumberListLD = MutableLiveData<List<PhoneNumber>>()
 
     init {
-        for (i in 1..10) {
+        for (i in 1..100) {
             val randomCodeCity = Random.nextInt(100, 999)
             val randomCodePhone = Random.nextInt(100, 999)
             val randomEnding = Random.nextInt(10, 99)
