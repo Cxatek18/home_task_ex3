@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Phone Book</string>
+    <string name="text_fish">Fish</string>
+    <string name="image_description_img">Картинка</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_name">Имя:</string>
+    <string name="hint_surname">Фамилия:</string>
+    <string name="hint_number_phone">Номер телефона:</string>
+    <string name="text_btn_add_new_phone_number">Добавить контакт</string>
+    <string name="btn_text_edit_phone_name">Обновить контакт</string>
+    <string name="text_menu_remove_contacts">Удалить несколько контактов</string>
+    <string name="text_menu_exit_remove_mode">Выйти из режима удаления</string>
+    <string name="text_button_remove_phone_numbers">Удалить</string>
 </resources>

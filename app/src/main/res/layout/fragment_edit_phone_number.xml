@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/main_background"
+    tools:context=".presentation.EditPhoneNumberFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="220dp"
+            android:inputType="textPersonName"
+            android:text="%s"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textPersonName"
+            android:text="%s"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+        <EditText
+            android:id="@+id/et_number_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:inputType="phone"
+            android:text="%s"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_surname" />
+
+        <Button
+            android:id="@+id/btn_edit_number_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/second_background"
+            android:text="@string/btn_text_edit_phone_name"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintTop_toBottomOf="@+id/et_number_phone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

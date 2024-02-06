@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main_background">#C4FFD7</color>
+    <color name="second_background">#C195FA8C</color>
+    <color name="remove_button_background">#FF0000</color>
+    <color name="color_text_hint">#535353</color>
 </resources>

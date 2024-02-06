@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btn_remove_phone_numbers"
+        android:title="@string/text_menu_remove_contacts" />
+    <item
+        android:id="@+id/btn_exit_mode_remove_phone_numbers"
+        android:title="@string/text_menu_exit_remove_mode"
+        android:visible="false"
+        />
+</menu>
