@@ -37,29 +37,12 @@ class MainFragment : Fragment() {
         setHasOptionsMenu(true)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.btn_remove_phone_numbers -> {
-                phoneNumberAdapter.isClickMenuOptionsRemovePhoneNumber = true
-                isClickRemovePhoneNumbers = true
-                binding.deleteButtonPhoneNumbers.visibility = View.VISIBLE
-                phoneNumberAdapter.notifyDataSetChanged()
-                true
-            }
-
-            R.id.btn_exit_mode_remove_phone_numbers -> {
-                phoneNumberAdapter.isClickMenuOptionsRemovePhoneNumber = false
-                isClickRemovePhoneNumbers = false
-                binding.deleteButtonPhoneNumbers.visibility = View.GONE
-                viewModel.editIsNoDeletedPhoneNumber()
-                phoneNumberAdapter.notifyDataSetChanged()
-                true
-            }
-
-            else -> {
-                super.onOptionsItemSelected(item)
-            }
-        }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
@@ -77,12 +60,31 @@ class MainFragment : Fragment() {
         super.onPrepareOptionsMenu(menu)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentMainBinding.inflate(inflater, container, false)
-        return binding.root
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.btn_remove_phone_numbers -> {
+                phoneNumberAdapter.isClickMenuOptionsRemovePhoneNumber = true
+                isClickRemovePhoneNumbers = true
+                binding.deleteButtonPhoneNumbers.visibility = View.VISIBLE
+                binding.addNumberPhoneButton.visibility = View.GONE
+                phoneNumberAdapter.notifyDataSetChanged()
+                true
+            }
+
+            R.id.btn_exit_mode_remove_phone_numbers -> {
+                phoneNumberAdapter.isClickMenuOptionsRemovePhoneNumber = false
+                isClickRemovePhoneNumbers = false
+                binding.deleteButtonPhoneNumbers.visibility = View.GONE
+                binding.addNumberPhoneButton.visibility = View.VISIBLE
+                viewModel.editIsNoDeletedPhoneNumber()
+                phoneNumberAdapter.notifyDataSetChanged()
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

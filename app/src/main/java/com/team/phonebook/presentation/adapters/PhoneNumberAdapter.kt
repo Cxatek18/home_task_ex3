@@ -37,10 +37,8 @@ class PhoneNumberAdapter : ListAdapter<PhoneNumber, PhoneNumberViewHolder>(
                 checkboxIsDeleted.isChecked = phoneNumber.isDelete
                 if (isClickMenuOptionsRemovePhoneNumber) {
                     checkboxIsDeleted.visibility = VISIBLE
-                    checkboxIsDeleted.setOnCheckedChangeListener { buttonView, isChecked ->
-                        if (isChecked) {
-                            setMarkCheckBox?.invoke(id)
-                        }
+                    checkboxIsDeleted.setOnClickListener {
+                        setMarkCheckBox?.invoke(id)
                     }
                 } else {
                     checkboxIsDeleted.visibility = GONE
